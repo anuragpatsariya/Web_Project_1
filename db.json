@@ -1,0 +1,28 @@
+{
+  "imagedata": [
+    {
+      "id": 1,
+      "img_path": "img\\large\\1.png",
+      "img_heading": "First Name",
+      "img_details": "Here is a chance to take down this picture just in $500000000."
+    },
+    {
+      "id": 2,
+      "img_path": "img\\large\\2.png",
+      "img_heading": "Second Name",
+      "img_details": "Here is a chance to take down this picture just in $550000000."
+    },
+    {
+      "id": 3,
+      "img_path": "img\\large\\3.png",
+      "img_heading": "Third Name",
+      "img_details": "Here is a chance to take down this picture just in $500065000."
+    },
+    {
+      "id": 4,
+      "img_path": "img\\large\\4.png",
+      "img_heading": "Fourth Name",
+      "img_details": "Here is a chance to take down this picture just in $522000000."
+    }
+  ]
+}
