@@ -39,55 +39,7 @@
             </section>
             <!-- // grid-wrap -->
             <section class="slideshow">
-                <ul>
-                    <li>
-                        <figure>
-                            <figcaption>
-                                <h3>Letterpress asymmetrical</h3>
-                                <p>Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb
-                                    placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard
-                                    anim quis, ullamco craft beer.</p>
-                            </figcaption>
-                            <img src="img/large/1.png" alt="img01" />
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
-                            <figcaption>
-                                <h3>Vice velit chia</h3>
-                                <p>Chillwave Echo Park Etsy organic Cosby sweater seitan authentic pour-over. Occupy wolf selvage
-                                    bespoke tattooed, cred sustainable Odd Future hashtag butcher.</p>
-                            </figcaption>
-                            <img src="img/large/3.png" alt="img02" />
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
-                            <figcaption>
-                                <h3>Brunch semiotics</h3>
-                                <p>IPhone PBR polaroid before they sold out meh you probably haven't heard of them leggings
-                                    tattooed tote bag, butcher paleo next level single-origin coffee photo booth.</p>
-                            </figcaption>
-                            <img src="img/large/4.png" alt="img03" />
-                        </figure>
-                    </li>
-                    <li>
-                        <figure>
-                            <figcaption>
-                                <h3>Chillwave nihil occupy</h3>
-                                <p>Vice cliche locavore mumblecore vegan wayfarers asymmetrical letterpress hoodie mustache.
-                                    Shabby chic lomo polaroid, scenester 8-bit Portland Pitchfork VHS tote bag.</p>
-                            </figcaption>
-                            <img src="img/large/5.png" alt="img04" />
-                        </figure>
-                    </li>
-                </ul>
-                <nav>
-                    <span class="icon nav-prev"></span>
-                    <span class="icon nav-next"></span>
-                    <span class="icon nav-close"></span>
-                </nav>
-                <div class="info-keys icon">Navigate with arrow keys</div>
+
             </section>
             <!-- // slideshow -->
         </div>
@@ -107,15 +59,18 @@
                     <label>Desription</label>
                     <input type="text" id="description" />
                     <form id="uploadForm" enctype="multipart/form-data" action="/api/photo" method="POST">-->
-                        <input type="file" name="userphoto" id = "imgfile"/>
-                        <input type="text" name="imgheading" id="imgheading"/>
-                        <input type="text" name="imgdetails" id="imgdetails"/>
-                        <input type="button" value="Upload Image" name="submit" onclick="uploadimg()">
+                    
+                    <input type="file" name="userphoto" id="imgfile" />
+                    <input type="text" name="imgheading" id="imgheading" />
+                    <input type="text" name="imgdetails" id="imgdetails" />
+                    <input type="button" value="Upload Image" name="submit" onclick="uploadimg()" id="submit" />
+                    <label id="up" class="sr-only">File uploaded successfully.</label>
                     <!--</form>-->
                 </div>
                 <div class="modal-footer">
+
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary" onclick="uploadRecord()">Upload Record</button>
+                    <button type="button" class="btn btn-primary" onclick="uploadRecord()" id="uploadrecord">Upload Record</button>
                 </div>
                 <script src="jquery.js"></script>
                 <script type="text/javascript" src="js/actions.js"></script>
