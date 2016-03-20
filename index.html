@@ -12,6 +12,7 @@
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/demo.css" />
     <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
     <script src="js/modernizr.custom.js"></script>
 </head>
 
@@ -21,14 +22,19 @@
             <span>Blueprint <span class="bp-icon bp-icon-about" data-content="The Blueprints are a collection of basic and minimal website concepts, components, plugins and layouts with minimal style for easy adaption and usage, or simply for inspiration."></span></span>
             <h1>Blackmailing Gallery</h1>
             <nav>
-                <!--<a href="http://tympanus.net/codrops/category/blueprints/" class="bp-icon bp-icon-archive" data-info="upload photo"><span>Upload Photo</span></a> -->
-                <input type="file"><Button type="Button">Upload</Button>
+                <!--<a href="http://tympanus.net/codrops/category/blueprints/" class="bp-icon bp-icon-archive" data-info="upload photo"><span>Upload Photo</span></a> 
+                <Button type="Button">Upload A New Photo</Button> -->
+                <button type="button" id="myInput" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                    Upload
+                </button>
+
             </nav>
         </header>
+
         <div id="grid-gallery" class="grid-gallery">
             <section class="grid-wrap">
                 <ul class="grid" id="grid">
-                    
+
                 </ul>
             </section>
             <!-- // grid-wrap -->
@@ -87,16 +93,42 @@
         </div>
         <!-- // grid-gallery -->
     </div>
-    <script src="jquery.js"></script>
-    <script src="js/actions.js"></script>
-    
-    <script src="js/imagesloaded.pkgd.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpGridGallery.js"></script>
-    <script>
-        new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
-    </script>
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Upload a new Photo</h4>
+                </div>
+                <div class="modal-body">
+                    <!--<input type="file" />
+                    <label>Heading</label>
+                    <input type="text" id="subject" />
+                    <label>Desription</label>
+                    <input type="text" id="description" />
+                    <form id="uploadForm" enctype="multipart/form-data" action="/api/photo" method="POST">-->
+                        <input type="file" name="userphoto" id = "imgfile"/>
+                        <input type="text" name="imgheading" id="imgheading"/>
+                        <input type="text" name="imgdetails" id="imgdetails"/>
+                        <input type="button" value="Upload Image" name="submit" onclick="uploadimg()">
+                    <!--</form>-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="uploadRecord()">Upload Record</button>
+                </div>
+                <script src="jquery.js"></script>
+                <script type="text/javascript" src="js/actions.js"></script>
+
+                <script src="js/imagesloaded.pkgd.min.js"></script>
+                <script src="js/masonry.pkgd.min.js"></script>
+                <script src="js/classie.js"></script>
+                <script src="js/cbpGridGallery.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+                crossorigin="anonymous"></script>
+                <script>
+                    new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
+                </script>
 </body>
 
 </html>
