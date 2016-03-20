@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackmailing Gallery</title>
+    <meta name="description" content="Blueprint: Blueprint: Google Grid Gallery" />
+    <meta name="keywords" content="google getting started gallery, image gallery, image grid, template, masonry" />
+    <meta name="author" content="Codrops" />
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="css/component.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <script src="js/modernizr.custom.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header class="clearfix">
+            <span>Blueprint <span class="bp-icon bp-icon-about" data-content="The Blueprints are a collection of basic and minimal website concepts, components, plugins and layouts with minimal style for easy adaption and usage, or simply for inspiration."></span></span>
+            <h1>Blackmailing Gallery</h1>
+            <nav>
+                <!--<a href="http://tympanus.net/codrops/category/blueprints/" class="bp-icon bp-icon-archive" data-info="upload photo"><span>Upload Photo</span></a> 
+                <Button type="Button">Upload A New Photo</Button> -->
+                <button type="button" id="myInput" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+                    Upload
+                </button>
+
+            </nav>
+        </header>
+
+        <div id="grid-gallery" class="grid-gallery">
+            <section class="grid-wrap">
+                <ul class="grid" id="grid">
+
+                </ul>
+            </section>
+            <!-- // grid-wrap -->
+            <section class="slideshow">
+                <ul>
+                    <li>
+                        <figure>
+                            <figcaption>
+                                <h3>Letterpress asymmetrical</h3>
+                                <p>Kale chips lomo biodiesel stumptown Godard Tumblr, mustache sriracha tattooed cray aute slow-carb
+                                    placeat delectus. Letterpress asymmetrical fanny pack art party est pour-over skateboard
+                                    anim quis, ullamco craft beer.</p>
+                            </figcaption>
+                            <img src="img/large/1.png" alt="img01" />
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <figcaption>
+                                <h3>Vice velit chia</h3>
+                                <p>Chillwave Echo Park Etsy organic Cosby sweater seitan authentic pour-over. Occupy wolf selvage
+                                    bespoke tattooed, cred sustainable Odd Future hashtag butcher.</p>
+                            </figcaption>
+                            <img src="img/large/3.png" alt="img02" />
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <figcaption>
+                                <h3>Brunch semiotics</h3>
+                                <p>IPhone PBR polaroid before they sold out meh you probably haven't heard of them leggings
+                                    tattooed tote bag, butcher paleo next level single-origin coffee photo booth.</p>
+                            </figcaption>
+                            <img src="img/large/4.png" alt="img03" />
+                        </figure>
+                    </li>
+                    <li>
+                        <figure>
+                            <figcaption>
+                                <h3>Chillwave nihil occupy</h3>
+                                <p>Vice cliche locavore mumblecore vegan wayfarers asymmetrical letterpress hoodie mustache.
+                                    Shabby chic lomo polaroid, scenester 8-bit Portland Pitchfork VHS tote bag.</p>
+                            </figcaption>
+                            <img src="img/large/5.png" alt="img04" />
+                        </figure>
+                    </li>
+                </ul>
+                <nav>
+                    <span class="icon nav-prev"></span>
+                    <span class="icon nav-next"></span>
+                    <span class="icon nav-close"></span>
+                </nav>
+                <div class="info-keys icon">Navigate with arrow keys</div>
+            </section>
+            <!-- // slideshow -->
+        </div>
+        <!-- // grid-gallery -->
+    </div>
+    <div id="myModal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">Upload a new Photo</h4>
+                </div>
+                <div class="modal-body">
+                    <!--<input type="file" />
+                    <label>Heading</label>
+                    <input type="text" id="subject" />
+                    <label>Desription</label>
+                    <input type="text" id="description" />
+                    <form id="uploadForm" enctype="multipart/form-data" action="/api/photo" method="POST">-->
+                     
+ 					<div style="position:relative;">
+        				<a class='btn btn-primary' href='javascript:;'>
+            				Choose Image
+            				<input type="file" id="imgfile" style='position:absolute;z-index:2;top:0;left:0;filter: alpha(opacity=0);-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";opacity:0;background-color:transparent;color:transparent;' name="userphoto" size="40"  onchange='$("#upload-file").html($(this).val());'>
+        				</a>
+        				&nbsp;
+        				<span class='label label-info' id="upload-file"></span>
+					</div>
+                        <input type="text" name="imgheading" id="imgheading"/>
+                        <input type="text" name="imgdetails" id="imgdetails"/>
+                        <input type="button" value="Upload Image" name="submit" onclick="uploadimg()">
+                    <!--</form>-->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary" onclick="uploadRecord()">Upload Record</button>
+                </div>
+                <script src="jquery.js"></script>
+                <script type="text/javascript" src="js/actions.js"></script>
+
+                <script src="js/imagesloaded.pkgd.min.js"></script>
+                <script src="js/masonry.pkgd.min.js"></script>
+                <script src="js/classie.js"></script>
+                <script src="js/cbpGridGallery.js"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+                crossorigin="anonymous"></script>
+                <script>
+                    new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
+                </script>
+</body>
+
+</html>
